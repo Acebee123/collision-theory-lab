@@ -13,10 +13,10 @@
       if(!['concentration','temperature','surface','catalyst'].includes(factor))throw new RangeError('Unknown factor: '+factor);
       this.factor=factor;this.level=clamp(Number(level)||0,0,1);
       if(factor==='surface')this.level=Math.round(this.level*2)/2;if(factor==='catalyst')this.level=this.level>=.5?1:0;
-      this.targetTemperature=factor==='temperature'?1+1.6*this.level:1;
+      this.targetTemperature=factor==='temperature'?1+3*this.level:1;
       this.ea=factor==='catalyst'&&this.level>=.5?.58:1.45;
       this.n=factor==='surface'?1+Math.round(this.level*2):1;
-      this.count=factor==='concentration'?36+2*Math.round(this.level*18):36;
+      this.count=factor==='concentration'?36+4*Math.round(this.level*18):36;
       const active=this.particles.filter(p=>!p.retiring);
       if(active.length>this.count)active.slice(this.count).forEach(p=>p.retiring=true);
       for(let i=active.length;i<this.count;i++)this.particles.push(this.create(i));

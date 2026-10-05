@@ -17,8 +17,8 @@ Deterministic 120-second runs passed these comparisons:
 
 | Factor | Lower condition: effective collisions | Higher condition: effective collisions |
 |---|---:|---:|
-| Concentration: 36 → 72 molecules | 36 | 118 |
-| Temperature: 1.0 → 2.6 relative kinetic energy | 36 | 105 |
+| Concentration: 36 → 108 molecules | 36 | 290 |
+| Temperature: 1.0 → 4.0 relative kinetic energy | 36 | 159 |
 | Surface area: 1 → 27 pieces | 99 | 236 |
 | Catalyst: Eₐ 1.45 → 0.58 | 36 | 78 |
 
@@ -59,4 +59,12 @@ The original pale materials and lighting are retained, without fragment outlines
 The camera can orbit through a full horizontal turn and tilt from near level to above the chamber. Dragging and arrow keys rotate the entire scene; Reset View restores the initial angle. Touch gestures on the canvas are reserved for rotation.
 
 During a collision close-up, live molecules, bonds, solid fragments and surface markers fade completely out before the camera arrives. They reappear as the view returns to the chamber, keeping the demonstration unobstructed without changing the held model state.
+
+## Clearer condition changes
+
+Concentration now spans 36–108 molecules in the same chamber. Temperature spans 1–4 relative mean kinetic energy, corresponding to 1–2 relative thermal speed. The same initial speed distribution is retained across concentration changes, and catalyst still leaves velocities unchanged. The updated model assertions and deterministic comparisons above passed.
+
+The three comparison cards and their extra feedback strip were removed at the user's request. The stronger concentration/temperature ranges, clearer temperature trails, and existing same-energy catalyst replay remain. Temperature trails are hidden when paused or replaying.
+
+Browser checks confirmed 108 molecules, the 2.00× speed target, a settled Eₐ of 0.58, English/Bahasa Melayu labels, and both pass/fail outcomes for the same-energy catalyst comparison. At 200% display size the page remained within its viewport (984px content width, 984px viewport). No browser JavaScript errors were observed.
 
