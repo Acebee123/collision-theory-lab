@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#e9eeed">
   <title>Collision Theory Lab · Form 4 Chemistry</title>
   <style>
-    *{box-sizing:border-box}body{margin:0;background:#e9eeed;color:#293c43;font-family:Inter,"Segoe UI",sans-serif}
+    *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 35% 0%,#f7faf5,#e9eeed 75%);color:#293c43;font-family:Inter,"Segoe UI",sans-serif}
     main{max-width:1450px;margin:auto;padding:30px 34px 22px}
     @media(max-width:650px){main{padding:14px 10px}}
   </style>
@@ -132,13 +132,114 @@
 @media(max-width:850px){.layout{grid-template-columns:minmax(0,1.8fr) minmax(235px,1fr)}.left,.right{padding:16px 14px}.factor{padding:7px 10px}.live{display:none}.particle-canvas{min-height:235px}.controls{padding:12px 15px}.condition{padding:12px 17px}.chain ol{gap:20px}.chain li{font-size:12px}}
 @media(max-width:650px){.layout{grid-template-columns:1fr}.left{border-right:0;border-bottom:1px solid var(--edge)}.right{display:block}.energy-canvas{height:173px}.energy-spread{height:76px}.particle-canvas{height:auto;min-height:0;aspect-ratio:1.7}.bottom{grid-template-columns:1fr;gap:21px}.condition{grid-template-columns:1fr;gap:10px}.controls{align-items:flex-start;gap:8px}.factors{display:grid;grid-template-columns:1fr 1fr}.label-switch{padding-top:9px}.chain ol{grid-template-columns:1fr;gap:14px}.chain li{min-height:24px}.chain li:not(:last-child):after{content:'↓';left:1px;right:auto;top:22px}.heading h1{font-size:23px}.heading .eyebrow{font-size:9px}.actions{padding:14px 12px;gap:7px}.actions .primary{min-width:0;flex:1}.actions .btn:not(.primary){min-width:55px}.btn{padding:8px 10px;font-size:11px}.vessel-label,.speed-label{font-size:9px}.speed-label{right:10px}.vessel-label{left:10px}.disclosure{padding:18px 16px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* Presentation-only refinement: existing layout, controls and semantic structure. */
+.heading{flex-wrap:wrap}.header-meta{display:flex;align-items:center;justify-content:flex-end;gap:18px;flex-wrap:wrap}.language-picker{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--muted)}.language-picker select{font:inherit;font-size:12px;min-height:34px;max-width:160px;padding:5px 9px;border:1px solid #c8d9cf;border-radius:7px;background:#fbfdf9;color:#355f50;cursor:pointer;box-shadow:0 2px 4px #35543d07}.language-picker select:focus-visible{outline:3px solid #799d98;outline-offset:3px}
+.workspace{container-type:inline-size;container-name:workspace}.large-display .header-meta{width:100%;justify-content:flex-start;gap:12px}.size-picker select{min-width:74px}.heading h1{overflow-wrap:anywhere}.large-display .heading .eyebrow{white-space:normal}
+:host{--teal:#326f61;--panel:#fcfdf9;--soft:#edf3ef;font-size:14px}
+.heading{margin-bottom:22px}.heading h1{font-size:29px;color:#253f3d}.eyebrow{letter-spacing:1.6px}
+.workspace{border-color:#cbdad3;box-shadow:0 24px 65px #344e4212,0 3px 8px #344e4208;border-radius:20px}
+.controls{background:linear-gradient(180deg,#ffffff,#f5f8f3);padding-top:15px;padding-bottom:15px}
+.factor{transition:background .2s,color .2s,box-shadow .2s,transform .15s;min-height:42px}
+.factor:hover{background:#eaf1eb;color:#365f55}.factor[aria-pressed=true]{background:#e0ece5;box-shadow:inset 0 1px #ffffff,0 2px 4px #3554470d;color:#255d4e}
+button:active{transform:translateY(1px)}.btn{transition:background .2s,border-color .2s,box-shadow .2s,transform .15s;box-shadow:0 2px 3px #304e3a06}
+.btn:hover{border-color:#a4bfb0;box-shadow:0 4px 10px #304e3a0b}.btn.primary{background:linear-gradient(180deg,#427e6e,#326555);border-color:#346b5b;box-shadow:inset 0 1px #ffffff25,0 3px 8px #365e4420}
+.btn.primary:hover{background:linear-gradient(180deg,#3b7465,#295b4d)}
+.condition{padding-top:17px;padding-bottom:17px}.condition h2{font-size:14px;font-weight:600}.badge{padding:3px 8px;background:#eef4ed;border:1px solid #dce8dc;border-radius:20px;font-variant-numeric:tabular-nums}
+.left,.right{padding-top:22px}.right{background:linear-gradient(150deg,#fcfdf9,#f3f7f2)}.panel-head{margin-bottom:15px}.panel-head h2{font-size:15px;letter-spacing:.1px}
+.live{display:inline-flex;align-items:center;gap:5px}.live:before{content:'';width:5px;height:5px;background:#7b9d8b;border-radius:50%}
+.vessel{background:#e8efed;box-shadow:inset 0 2px 7px #526d6512,0 2px 5px #40584c08;border-color:#c9d8d5;border-radius:14px}
+.vessel:after{inset:7px;border-color:#ffffff75;border-radius:9px}.particle-canvas{height:clamp(290px,31vw,370px)}
+.vessel-label,.speed-label{font-size:10px;letter-spacing:.45px;color:#587470;text-shadow:0 1px #ffffff}
+.legend{gap:18px;margin-top:13px}.swatch{width:12px;height:12px;background:radial-gradient(circle at 30% 25%,#d4eee2,#4a8a72 65%,#244d40)}.swatch.b{background:radial-gradient(circle at 30% 25%,#f1eaff,#9486b8 60%,#51466d)}
+.energy-canvas{height:207px}.energy-spread{height:103px}.energy-note{border-top:1px solid #e1e9df;padding-top:10px;margin-top:7px;line-height:1.5}
+.energy-legend{flex-wrap:wrap;line-height:1.7}.actions{padding-top:18px;padding-bottom:18px;background:#f9fbf6}.disclosure{background:linear-gradient(135deg,#f6f9f3,#eef4ed)}
+.rate-canvas{height:130px}.meter-track{box-shadow:inset 0 1px 2px #526b5412}.experiment canvas{width:76px;height:80px;background:linear-gradient(150deg,#f9fcf6,#e3ece4);border:1px solid #dae5d9}
+.vessel:has(.replay:not([hidden])){min-height:410px}.vessel>.replay{background:linear-gradient(145deg,#f5f8f1,#e8efea)}.replay-top{padding:14px 16px 3px}.replay-top h3{font-size:13px;font-weight:600}
+.replay-options{padding:9px 16px;gap:7px}.replay-options button{min-height:34px;border-radius:7px;transition:background .2s,border-color .2s}.replay-options button:hover{background:#edf3e9;border-color:#a1bbaa}.replay-options button[aria-pressed=true]{background:#dfece1;border-color:#9ebda8;box-shadow:inset 0 1px #ffffff90}
+.replay canvas{min-height:210px}.checks{margin-bottom:10px;gap:10px}.check{border:1px solid #dbe4d7;border-radius:18px;padding:5px 11px;font-variant-numeric:tabular-nums}.check.pass{border-color:#b9d3bb}.check.fail{border-color:#d9beb0}.replay-stage{margin-bottom:14px;font-weight:500}
+@media(max-width:850px){.left,.right{padding:18px 14px}.energy-legend{font-size:9px}.particle-canvas{height:310px}.live{display:none}}
+@media(max-width:650px){.heading h1{font-size:25px}.heading{align-items:center;margin-bottom:16px}.eyebrow{font-size:8px;letter-spacing:.7px}.controls{padding:12px}.factor{font-size:12px;padding:8px 10px}.condition{padding:14px 16px}.layout{grid-template-columns:1fr}.particle-canvas{height:auto;aspect-ratio:1.5}.energy-canvas{height:206px}.energy-spread{height:103px}.energy-legend{font-size:10px}.vessel-label,.speed-label{font-size:8px;letter-spacing:0}.vessel:has(.replay:not([hidden])){min-height:430px}.replay-top{padding:12px 10px 2px}.replay-top h3{font-size:11px}.replay-top button{font-size:10px}.replay-options{padding:8px 10px;gap:4px}.replay-options button{font-size:10px;padding:5px 6px}.check{font-size:10px}.replay-stage{font-size:11px}.replay canvas{min-height:210px}.badge{font-size:10px}}
+@media(max-width:650px){.controls{display:grid;grid-template-columns:1fr}.factors{width:100%;gap:5px}.label-switch{padding-top:2px;justify-self:end;white-space:normal}.heading .eyebrow{white-space:nowrap}.heading h1{font-size:23px}.header-meta{width:100%;justify-content:space-between;gap:7px}.language-picker>span{display:none}.vessel:has(.replay:not([hidden])){min-height:440px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}button:active{transform:none}}
+@container workspace (max-width:900px){.layout{grid-template-columns:1fr}.left{border-right:0;border-bottom:1px solid var(--edge)}.particle-canvas{height:370px}.right{padding:20px}.live{display:none}.energy-canvas{height:207px}.energy-spread{height:103px}}
+@container workspace (max-width:650px){.controls{display:grid;grid-template-columns:1fr}.factors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}.label-switch{justify-self:end;white-space:normal}.condition{grid-template-columns:1fr;gap:10px}.bottom{grid-template-columns:1fr}.chain ol{grid-template-columns:1fr;gap:14px}.chain li{min-height:24px}.chain li:not(:last-child):after{content:'↓';left:1px;right:auto;top:22px}.particle-canvas{height:auto;aspect-ratio:1.5}.vessel:has(.replay:not([hidden])){min-height:440px}.replay-options{flex-wrap:wrap}.replay-top{flex-wrap:wrap}.actions{flex-wrap:wrap}.actions .primary{min-width:0;flex-basis:100%}.actions .btn{min-width:0}.energy-legend{flex-wrap:wrap}.meters{gap:12px}.meter-row{grid-template-columns:minmax(0,1fr) minmax(25px,.8fr) 25px}.rate-head{flex-wrap:wrap}}
+@container workspace (max-width:380px){.factors{grid-template-columns:1fr}.controls,.condition,.left,.right,.disclosure{padding-left:10px;padding-right:10px}.vessel-label,.speed-label{position:static;display:block;padding:3px 8px;overflow-wrap:anywhere}.legend{gap:8px}.replay-stage{padding:0 6px}.replay-options button{width:100%}.checks{margin-left:5px;margin-right:5px;gap:5px}.check{padding:4px 7px}.vessel:has(.replay:not([hidden])){min-height:490px}.experiment{flex-wrap:wrap}.heading{gap:9px}.panel-head{flex-wrap:wrap}}
+.size-picker>span{display:inline}
+
   `;
 
+  const MALAY = {"Collision Theory Lab": "Makmal Teori Perlanggaran", "Collision Theory Lab · Form 4 Chemistry": "Makmal Teori Perlanggaran · Kimia Tingkatan 4", "Form 4 · Chapter 7": "Tingkatan 4 · Bab 7", "Language": "Bahasa", "Display size": "Saiz paparan", "Concentration": "Kepekatan", "Temperature": "Suhu", "Surface Area": "Luas Permukaan", "Catalyst": "Mangkin", "Dilute": "Cair", "Concentrated": "Pekat", "Reactant concentration": "Kepekatan bahan tindak balas", "Same volume · same temperature": "Isipadu sama · suhu sama", "More particles in the same volume": "Lebih banyak zarah dalam isipadu yang sama", "More collisions each second": "Lebih banyak perlanggaran setiap saat", "More effective collisions": "Lebih banyak perlanggaran berkesan", "Faster reaction": "Tindak balas lebih cepat", "Fewer particles in the same volume": "Lebih sedikit zarah dalam isipadu yang sama", "Fewer collisions each second": "Lebih sedikit perlanggaran setiap saat", "Fewer effective collisions": "Lebih sedikit perlanggaran berkesan", "Slower reaction": "Tindak balas lebih perlahan", "Cooler": "Lebih sejuk", "Hotter": "Lebih panas", "Same particle number · same Eₐ": "Bilangan zarah sama · Eₐ sama", "Particles move faster": "Zarah bergerak lebih laju", "More collisions have energy ≥ Eₐ": "Lebih banyak perlanggaran mempunyai tenaga ≥ Eₐ", "Particles move more slowly": "Zarah bergerak lebih perlahan", "Fewer collisions have energy ≥ Eₐ": "Lebih sedikit perlanggaran mempunyai tenaga ≥ Eₐ", "One large piece": "Satu ketulan besar", "Small pieces": "Ketulan kecil", "Solid fragmentation": "Pemecahan pepejal", "Same solid volume · same temperature": "Isipadu pepejal sama · suhu sama", "Same solid split into smaller pieces": "Pepejal yang sama dipecahkan menjadi ketulan lebih kecil", "More exposed collision sites": "Lebih banyak tapak perlanggaran terdedah", "One large piece of solid": "Satu ketulan pepejal yang besar", "Fewer exposed collision sites": "Lebih sedikit tapak perlanggaran terdedah", "Without catalyst": "Tanpa mangkin", "With catalyst": "Dengan mangkin", "Same particles · same thermal speed": "Zarah sama · kelajuan terma sama", "An alternative reaction pathway": "Laluan tindak balas alternatif", "Lower activation energy, Eₐ": "Tenaga pengaktifan lebih rendah, Eₐ", "More collisions become effective": "Lebih banyak perlanggaran menjadi berkesan", "Original reaction pathway": "Laluan tindak balas asal", "Higher activation energy, Eₐ": "Tenaga pengaktifan lebih tinggi, Eₐ", "Fewer collisions become effective": "Lebih sedikit perlanggaran menjadi berkesan", "Teaching Labels": "Label Pengajaran", "Dilute solution": "Larutan cair", "More particles, same space": "Lebih banyak zarah, ruang sama", "Warmer particles, more energy": "Zarah lebih panas, tenaga lebih tinggi", "Cooler particles": "Zarah lebih sejuk", "Smaller pieces, more exposed sites": "Ketulan lebih kecil, lebih banyak tapak terdedah", "A lower energy pathway": "Laluan dengan tenaga lebih rendah", "The original energy pathway": "Laluan tenaga asal", "Catalyst present": "Mangkin hadir", "Catalyst absent": "Mangkin tiada", "Particle View": "Paparan Zarah", "Live particle view": "Paparan zarah langsung", "Playback": "Kawalan Main", "Ⅱ Pause": "Ⅱ Jeda", "▷ Play": "▷ Main", "Slow Motion": "Gerak Perlahan", "Slow Motion · ¼×": "Gerak Perlahan · ¼×", "Slow motion": "Gerak perlahan", "Paused": "Dijeda", "↺ Reset": "↺ Tetap Semula", "Pause animation": "Jeda animasi", "Play animation": "Mainkan animasi", "SAME VOLUME": "ISIPADU SAMA", "EXPOSED SOLID SURFACES": "PERMUKAAN PEPEJAL TERDEDAH", "Reactant A": "Reaktan A", "Reactant B": "Reaktan B", "Products": "Hasil", "Reactants": "Reaktan", "One collision, up close": "Satu perlanggaran dari dekat", "Back to Particle View": "Kembali ke Paparan Zarah", "Wrong Orientation": "Orientasi Salah", "Too Little Energy": "Tenaga Tidak Mencukupi", "Effective Collision": "Perlanggaran Berkesan", "Correct orientation": "Orientasi betul", "Energy ≥ Eₐ": "Tenaga ≥ Eₐ", "× Energy < Eₐ": "× Tenaga < Eₐ", "✓ Energy ≥ Eₐ": "✓ Tenaga ≥ Eₐ", "× Wrong orientation": "× Orientasi salah", "✓ Correct orientation": "✓ Orientasi betul", "Particles approach": "Zarah menghampiri satu sama lain", "Contact · slow down and observe": "Sentuhan · perhatikan dengan teliti", "Compare energy and reactive faces": "Bandingkan tenaga dan orientasi reaktan", "Old bonds weaken · new bonds form": "Ikatan lama melemah · ikatan baharu terbentuk", "Two products separate": "Dua molekul hasil berpisah", "Energy below Eₐ → reactants separate unchanged": "Tenaga di bawah Eₐ → reaktan berpisah tanpa perubahan", "Wrong orientation → reactants separate unchanged": "Orientasi salah → reaktan berpisah tanpa perubahan", "Collision close-up": "Perlanggaran dari dekat", "Activation Energy": "Tenaga Pengaktifan", "Reaction pathway": "Laluan tindak balas", "With catalyst · available pathway": "Dengan mangkin · laluan alternatif", "Eₐ stays the same": "Eₐ kekal sama", "Lower Eₐ · same thermal speed": "Eₐ lebih rendah · kelajuan terma sama", "Add catalyst to lower Eₐ": "Tambah mangkin untuk merendahkan Eₐ", "More energy ≥ Eₐ · barrier unchanged": "Lebih banyak tenaga ≥ Eₐ · halangan kekal sama", "Lower kinetic energy · same barrier": "Tenaga kinetik lebih rendah · halangan sama", "Show One Collision": "Papar Satu Perlanggaran", "Why?": "Mengapa?", "The cause → effect": "Sebab → kesan", "Experiment": "Eksperimen", "Reaction Rate": "Kadar Tindak Balas", "Graph": "Graf", "Main sample held while the collision replays.": "Simulasi utama dijeda semasa perlanggaran dimainkan semula.", "A flash marks contact. Joined teal–violet pairs are products.": "Kilatan menandakan sentuhan. Pasangan hijau–ungu yang terikat ialah hasil tindak balas.", "Which collisions count?": "Perlanggaran manakah yang dikira?", "Last 10 simulation seconds": "10 saat simulasi terakhir", "Reactant collisions": "Perlanggaran reaktan", "Effective collisions": "Perlanggaran berkesan", "Only effective collisions make products.": "Hanya perlanggaran berkesan menghasilkan hasil tindak balas.", "Reaction rate": "Kadar tindak balas", "Live product trace": "Graf hasil secara langsung", "Steeper slope → more products each second": "Kecerunan lebih curam → lebih banyak hasil setiap saat", "At the experiment bench": "Di meja eksperimen", "A slower stream of bubbles": "Aliran gelembung lebih perlahan", "A faster stream of bubbles": "Aliran gelembung lebih cepat", "A gas-forming reaction · schematic": "Tindak balas menghasilkan gas · skema", "Same mass of solid · more exposed area": "Jisim pepejal sama · lebih luas permukaan terdedah", "Same temperature · an alternative pathway": "Suhu sama · laluan alternatif", "Continuous sample · reactants replenished": "Sampel berterusan · reaktan dibekalkan semula", "7.4 · Collision Theory": "7.4 · Teori Perlanggaran", "Qualitative model · illustrative particles & energies": "Model kualitatif · zarah dan tenaga sebagai ilustrasi", "Potential energy": "Tenaga keupayaan", "Reaction pathway →": "Laluan tindak balas →", "Kinetic energy distribution": "Taburan tenaga kinetik", "Kinetic energy →  ·  shaded fraction ≥ Eₐ": "Tenaga kinetik → · pecahan berlorek ≥ Eₐ", "Simulation time": "Masa simulasi", "Collision energy": "Tenaga perlanggaran", "Approaching": "Menghampiri", "Catalysed barrier": "Halangan bermangkin", "Activation barrier": "Halangan pengaktifan", "Same atoms · new bonds": "Atom sama · ikatan baharu", "Two AB products": "Dua molekul hasil AB", "Reactants remain unchanged": "Reaktan kekal tanpa perubahan", "Approach": "Hampiri", "Contact": "Sentuh", "Test": "Uji", "Reorganise": "Susun semula", "Separate": "Berpisah", "Rebound": "Melantun", "Collision theory interactive laboratory": "Makmal interaktif teori perlanggaran", "Select one factor": "Pilih satu faktor", "Collision example": "Contoh perlanggaran", "Learning sequence": "Urutan pembelajaran", "Moving reactant molecules; failed collisions bounce apart and effective collisions form products.": "Molekul reaktan bergerak; perlanggaran tidak berkesan menyebabkan reaktan melantun, manakala perlanggaran berkesan membentuk hasil tindak balas.", "Step-by-step collision showing approach, energy and orientation checks, and bond rearrangement.": "Perlanggaran langkah demi langkah menunjukkan zarah menghampiri, semakan tenaga dan orientasi, serta penyusunan semula ikatan.", "Exothermic energy profile showing activation energy measured from reactants to the peak.": "Profil tenaga eksotermik menunjukkan tenaga pengaktifan yang diukur dari aras tenaga reaktan ke puncak.", "Energy distribution: the shaded tail shows the fraction with sufficient energy. Temperature widens the spread; catalyst moves the threshold lower.": "Taburan tenaga: bahagian hujung berlorek menunjukkan pecahan zarah dengan tenaga mencukupi. Suhu meluaskan taburan; mangkin merendahkan ambang tenaga.", "Cumulative products against simulation time. A steeper slope means a faster reaction.": "Jumlah hasil melawan masa simulasi. Kecerunan lebih curam menunjukkan tindak balas lebih cepat.", "Schematic gas-forming experiment; bubble production follows successful particle collisions.": "Skema eksperimen yang menghasilkan gas; penghasilan gelembung mengikuti perlanggaran zarah yang berkesan."};
+
   class CollisionTheoryLab extends HTMLElement {
+    initializeLocalization(){
+      this.localizedNodes=new WeakMap();this.localizedAttributes=new WeakMap();
+      let saved='en';try{saved=global.localStorage.getItem('collision-theory-lab-language')||'en';}catch(e){}
+      const requested=this.getAttribute('language')||(this.getAttribute('lang')==='ms'?'ms':saved);
+      this.language=requested==='ms'?'ms':'en';
+      let savedScale=1;try{savedScale=Number(global.localStorage.getItem('collision-theory-lab-display-size'))||1;}catch(e){}
+      this.displayScale=clamp(Math.round(savedScale*4)/4,1,2);this.applyDisplayScale();
+    }
+    t(text){
+      if(this.language!=='ms'||typeof text!=='string')return text;
+      const key=text.trim();if(Object.prototype.hasOwnProperty.call(MALAY,key))return text.replace(key,MALAY[key]);
+      let match;
+      if((match=key.match(/^([\d.]+)× concentration$/)))return match[1]+'× kepekatan';
+      if((match=key.match(/^([\d.]+)× mean kinetic energy$/)))return match[1]+'× tenaga kinetik purata';
+      if((match=key.match(/^(\d+) pieces? · (\d+)× surface area$/)))return match[1]+' ketulan · '+match[2]+'× luas permukaan';
+      if((match=key.match(/^Thermal speed · ([\d.]+)×$/)))return 'Kelajuan terma · '+match[1]+'×';
+      if((match=key.match(/^(\d+) REACTANT MOLECULES · FIXED VOLUME$/)))return match[1]+' MOLEKUL REAKTAN · ISIPADU TETAP';
+      if((match=key.match(/^(\d+) products · ([\d.]+) s$/)))return match[1]+' hasil · '+match[2]+' s';
+      if((match=key.match(/^Same solid volume · (\d+)× exposed area$/)))return 'Isipadu pepejal sama · '+match[1]+'× luas terdedah';
+      if(key.startsWith('Collision E '))return key.replace('Collision E ','E perlanggaran ');
+      if((match=key.match(/^(Concentration|Temperature|Surface Area|Catalyst): (.+)\. (.+)\.$/)))return this.t(match[1])+': '+this.t(match[2])+'. '+this.t(match[3])+'.';
+      return text;
+    }
+    localizeUI(){
+      const root=this.shadowRoot.querySelector('.lab');
+      const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+      let node;while((node=walker.nextNode())){
+        const current=node.nodeValue,previous=this.localizedNodes.get(node);
+        const source=previous&&current===previous.translated?previous.source:current;
+        const translated=this.t(source);if(current!==translated)node.nodeValue=translated;
+        this.localizedNodes.set(node,{source,translated});
+      }
+      for(const element of [root,...root.querySelectorAll('[aria-label],[aria-valuetext],[title]')]){
+        let records=this.localizedAttributes.get(element);if(!records){records={};this.localizedAttributes.set(element,records);}
+        for(const attribute of ['aria-label','aria-valuetext','title']){if(!element.hasAttribute(attribute))continue;
+          const current=element.getAttribute(attribute),previous=records[attribute],source=previous&&current===previous.translated?previous.source:current,translated=this.t(source);
+          if(current!==translated)element.setAttribute(attribute,translated);records[attribute]={source,translated};
+        }
+      }
+      this.lang=this.language;this.$('language').value=this.language;
+      if(document.title==='Collision Theory Lab · Form 4 Chemistry'||document.title===MALAY['Collision Theory Lab · Form 4 Chemistry']){
+        document.title=this.t('Collision Theory Lab · Form 4 Chemistry');document.documentElement.lang=this.language;
+      }
+    }
+    setLanguage(language,emit=true){
+      if(!['en','ms'].includes(language))throw new RangeError('Unknown language: '+language);
+      this.language=language;try{global.localStorage.setItem('collision-theory-lab-language',language);}catch(e){}
+      if(this.replay)this.replay.stage='';this.updateUI();this.updateMeters();this.resize();if(emit)this.emitState();
+    }
+    applyDisplayScale(){
+      this.shadowRoot.querySelector('.lab').style.zoom=String(this.displayScale);
+      this.shadowRoot.querySelector('.lab').classList.toggle('large-display',this.displayScale>1);
+      this.$('display-size').value=String(this.displayScale);
+    }
+    setDisplayScale(scale,emit=true){
+      if(!Number.isFinite(Number(scale)))throw new RangeError('Display size must be a number');
+      this.displayScale=clamp(Math.round(Number(scale)*4)/4,1,2);this.applyDisplayScale();
+      try{global.localStorage.setItem('collision-theory-lab-display-size',String(this.displayScale));}catch(e){}
+      this.resize();if(emit)this.emitState();
+    }
+
     constructor(){
       super();this.attachShadow({mode:'open'});this.model=new CollisionModel();this.playing=!global.matchMedia('(prefers-reduced-motion: reduce)').matches;this.slow=false;this.labels=true;this.replay=null;this.displayEa=1.45;this.recent=[];this.frame=0;this.last=0;this.uiClock=0;this.panel=null;this.beforeReplayPlaying=null;
+      // Rendering state never consumes the model RNG or changes collision criteria.
+      this.visuals=new WeakMap();this.materials=new Map();this.chambers=new Map();this.visualClock=0;this.accumulator=0;this.lastCollision=null;this.collisionStamp=-10;this.displayTemperature=1;
+      this.reducedMotion=global.matchMedia('(prefers-reduced-motion: reduce)').matches;
       this.shadowRoot.innerHTML=`<style>${style}</style><section class="lab" aria-label="Collision theory interactive laboratory">
-<header class="heading"><h1>Collision Theory Lab</h1><span class="eyebrow">Form 4 · Chapter 7</span></header>
+<header class="heading"><h1>Collision Theory Lab</h1><div class="header-meta"><span class="eyebrow">Form 4 · Chapter 7</span><label class="language-picker"><span>Language</span><select id="language" aria-label="Language"><option value="en" lang="en">English</option><option value="ms" lang="ms">Bahasa Melayu</option></select></label><label class="language-picker size-picker"><span>Display size</span><select id="display-size" aria-label="Display size"><option value="1">100%</option><option value="1.25">125%</option><option value="1.5">150%</option><option value="1.75">175%</option><option value="2">200%</option></select></label></div></header>
 <div class="workspace">
   <div class="controls"><div class="factors" role="group" aria-label="Select one factor">${Object.entries(FACTORS).map(([k,v])=>`<button class="factor" data-factor="${k}" aria-pressed="${k==='concentration'}">${v.title}</button>`).join('')}</div><label class="label-switch"><input id="labels" type="checkbox" checked>Teaching Labels</label></div>
   <div class="condition"><div class="condition-top"><h2 id="condition-title">Dilute solution</h2><span class="badge" id="setting-value">1.0× concentration</span></div><div class="adjust"><label class="sr" for="factor-range" id="range-label">Reactant concentration</label><div id="range-ui"><div class="range-labels"><span id="low">Dilute</span><span id="high">Concentrated</span></div><input id="factor-range" type="range" min="0" max="100" value="0" step="1"></div><div class="toggle" id="catalyst-ui" hidden><button data-catalyst="0" aria-pressed="true">Without catalyst</button><button data-catalyst="1" aria-pressed="false">With catalyst</button></div></div></div>
@@ -157,11 +258,13 @@
 </div>
 <span class="sr" id="announcement" role="status" aria-live="polite"></span>
 </section>`;
-      this.$=id=>this.shadowRoot.getElementById(id);this.contexts={};this.bubbles=[];this.bind();
+      this.$=id=>this.shadowRoot.getElementById(id);this.contexts={};this.bubbles=[];this.initializeLocalization();this.bind();
     }
-    connectedCallback(){if(this.frame)return;this.resizeObserver=new ResizeObserver(()=>this.resize());this.resizeObserver.observe(this);this.resize();this.updateUI();this.last=0;this.frame=requestAnimationFrame(t=>this.tick(t));}
+    connectedCallback(){if(this.frame)return;this.resizeObserver=new ResizeObserver(()=>this.resize());this.resizeObserver.observe(this);this.resizeObserver.observe(this.$('particles'));this.resizeObserver.observe(this.$('replay-canvas'));this.resize();this.updateUI();this.last=0;this.frame=requestAnimationFrame(t=>this.tick(t));}
     disconnectedCallback(){cancelAnimationFrame(this.frame);this.frame=0;this.resizeObserver?.disconnect();}
     bind(){
+      this.$('language').addEventListener('change',e=>this.setLanguage(e.target.value));
+      this.$('display-size').addEventListener('change',e=>this.setDisplayScale(+e.target.value));
       this.shadowRoot.querySelectorAll('[data-factor]').forEach(b=>b.addEventListener('click',()=>this.setFactor(b.dataset.factor,0)));
       this.$('factor-range').addEventListener('input',e=>this.setFactor(this.model.factor,+e.target.value/100));
       this.shadowRoot.querySelectorAll('[data-catalyst]').forEach(b=>b.addEventListener('click',()=>this.setFactor('catalyst',+b.dataset.catalyst)));
@@ -178,18 +281,19 @@
     }
     setFactor(factor,level=0){
       if(this.replay)this.backToParticles(false);
-      const previousFactor=this.model.factor,previousSolids=this.model.solids.map(s=>({...s})),previousN=this.model.n;
-      this.model.configure(factor,level);this.surfaceTransition=null;
+      const previousTransition=this.surfaceTransition,previousFactor=this.model.factor,previousSolids=this.model.solids.map(s=>({...s})),previousN=this.model.n;
+      this.model.configure(factor,level);this.surfaceTransition=factor==='surface'&&previousFactor===factor&&previousN===this.model.n?previousTransition:null;
       if(factor==='surface'&&previousFactor===factor&&previousN!==this.model.n){
-        this.surfaceTransition={time:0,from:previousSolids};
+        this.surfaceTransition=this.makeSolidTransition(previousSolids,this.model.solids,previousN,this.model.n);
+        if(previousTransition){const t=ease(previousTransition.time/1.15);this.surfaceTransition.resume=true;this.surfaceTransition.cells.forEach((cell,i)=>{const old=previousTransition.cells[i];cell.from={x:lerp(old.from.x,old.to.x,t),y:lerp(old.from.y,old.to.y,t)};});}
       }
-      this.recent=[];this.bubbles=[];this.replay=null;this.$('replay').hidden=true;this.$('factor-range').value=this.model.level*100;this.lastSampleTime=-1;this.updateMeters();this.updateUI();this.emitState();
+      this.visuals=new WeakMap();this.accumulator=0;this.lastCollision=null;this.recent=[];this.bubbles=[];this.replay=null;this.$('replay').hidden=true;this.$('factor-range').value=this.model.level*100;this.lastSampleTime=-1;this.updateMeters();this.updateUI();this.emitState();
     }
-    setState(state={}){if((state.factor!==undefined&&state.factor!==this.model.factor)||(state.level!==undefined&&state.level!==this.model.level))this.setFactor(state.factor??this.model.factor,state.level??0);if(typeof state.playing==='boolean')this.playing=state.playing;if(typeof state.slow==='boolean')this.slow=state.slow;if(typeof state.labels==='boolean')this.labels=state.labels;this.updateUI();this.emitState();}
-    getState(){return {...this.model.snapshot(),playing:this.playing,slow:this.slow,labels:this.labels,replay:this.replay?.kind||null,panel:this.panel};}
+    setState(state={}){if((state.factor!==undefined&&state.factor!==this.model.factor)||(state.level!==undefined&&state.level!==this.model.level))this.setFactor(state.factor??this.model.factor,state.level??0);if(typeof state.playing==='boolean')this.playing=state.playing;if(typeof state.slow==='boolean')this.slow=state.slow;if(typeof state.labels==='boolean')this.labels=state.labels;if(state.displayScale!==undefined)this.setDisplayScale(state.displayScale,false);if(state.language!==undefined)this.setLanguage(state.language,false);this.updateUI();this.emitState();}
+    getState(){return {...this.model.snapshot(),language:this.language,displayScale:this.displayScale,playing:this.playing,slow:this.slow,labels:this.labels,replay:this.replay?.kind||null,panel:this.panel};}
     reset(){this.replay=null;this.beforeReplayPlaying=null;this.panel=null;this.$('playback').open=false;this.playing=true;this.slow=false;this.labels=true;this.setFactor('concentration',0);this.displayEa=this.model.ea;}
     emitState(){this.dispatchEvent(new CustomEvent('lab-state-change',{detail:this.getState(),bubbles:true,composed:true}));}
-    showCollision(kind='success'){if(!['success','wrong','low'].includes(kind))throw new RangeError('Unknown collision example');if(!this.replay)this.beforeReplayPlaying=this.playing;this.panel=null;this.$('playback').open=false;this.replay={kind,time:0,stage:''};this.playing=true;this.$('replay').hidden=false;this.shadowRoot.querySelectorAll('[data-case]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.case===kind)));this.updateUI();this.resize();this.emitState();}
+    showCollision(kind='success'){if(!['success','wrong','low'].includes(kind))throw new RangeError('Unknown collision example');if(!this.replay)this.beforeReplayPlaying=this.playing;this.panel=null;this.$('playback').open=false;this.replay={kind,time:0,stage:''};this.lastCollision=null;this.playing=true;this.$('replay').hidden=false;this.shadowRoot.querySelectorAll('[data-case]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.case===kind)));this.updateUI();this.resize();this.emitState();}
     backToParticles(emit=true){
       this.replay=null;this.$('replay').hidden=true;
       if(this.beforeReplayPlaying!==null)this.playing=this.beforeReplayPlaying;
@@ -213,72 +317,294 @@
       this.$('fixed').textContent=f.fixed;this.$('range-label').textContent=f.control;this.$('factor-range').setAttribute('aria-valuetext',this.$('setting-value').textContent);this.$('factor-range').step=m.factor==='surface'?'50':'1';this.$('low').textContent=f.low;this.$('high').textContent=f.high;this.$('range-ui').hidden=cat;this.$('catalyst-ui').hidden=!cat;
       this.$('speed').textContent=`Thermal speed · ${Math.sqrt(m.temperature).toFixed(2)}×`;this.$('vessel-label').textContent=m.factor==='surface'?'EXPOSED SOLID SURFACES':`${m.count} REACTANT MOLECULES · FIXED VOLUME`;
       this.$('energy-note').textContent=cat?(m.ea<1?'Lower Eₐ · same thermal speed':'Add catalyst to lower Eₐ'):m.factor==='temperature'?(up?'More energy ≥ Eₐ · barrier unchanged':'Lower kinetic energy · same barrier'):'Eₐ stays the same';
-      this.$('active-path-label').textContent=cat&&m.ea<1?'With catalyst':'Reaction pathway';this.$('original-path-label').hidden=!(cat&&m.ea<1);
+      this.$('active-path-label').textContent=cat&&m.ea<1?'With catalyst':'Reaction pathway';this.$('original-path-label').hidden=!cat;if(cat)this.$('active-path-label').textContent=m.ea<1?'With catalyst':'With catalyst · available pathway';
       this.$('chain').innerHTML=(up?f.steps:f.base).map(s=>`<li><span class="chain-dot"></span><span>${s}</span></li>`).join('');
       this.$('observation').textContent=up?'A faster stream of bubbles':'A slower stream of bubbles';
       this.$('experiment-note').textContent=m.factor==='surface'?'Same mass of solid · more exposed area':m.factor==='catalyst'?'Same temperature · an alternative pathway':'A gas-forming reaction · schematic';
       this.$('play').textContent=this.playing?'Ⅱ Pause':'▷ Play';this.$('play').setAttribute('aria-label',this.playing?'Pause animation':'Play animation');this.$('slow').setAttribute('aria-pressed',String(this.slow));this.$('slow').textContent=this.slow?'Slow Motion · ¼×':'Slow Motion';this.$('labels').checked=this.labels;this.shadowRoot.querySelector('.lab').classList.toggle('no-labels',!this.labels);this.$('live').textContent=this.replay?'Collision close-up':this.playing?(this.slow?'Slow motion':'Live particle view'):'Paused';
       this.$('mode-note').textContent=this.replay?'Main sample held while the collision replays.':'A flash marks contact. Joined teal–violet pairs are products.';
-      this.$('announcement').textContent=`${f.title}: ${this.$('setting-value').textContent}. ${this.$('energy-note').textContent}.`;
+      this.$('announcement').textContent=`${f.title}: ${this.$('setting-value').textContent}. ${this.$('energy-note').textContent}.`;this.localizeUI();
     }
-    resize(){for(const id of ['particles','energy','energy-spread','rate','experiment','replay-canvas']){const canvas=this.$(id),r=canvas.getBoundingClientRect();if(!r.width||!r.height)continue;const dpr=Math.min(global.devicePixelRatio||1,2);canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.height*dpr);const ctx=canvas.getContext('2d');ctx.setTransform(dpr,0,0,dpr,0,0);this.contexts[id]={ctx,w:r.width,h:r.height};}this.draw();}
-    tick(now){const dt=this.last?Math.min((now-this.last)/1000,.05):0;this.last=now;const simDt=dt*(this.slow?.25:1);
-      if(this.surfaceTransition){this.surfaceTransition.time+=dt;if(this.surfaceTransition.time>=.85)this.surfaceTransition=null;}
-      if(this.playing){if(this.replay){this.replay.time=Math.min(7.3,this.replay.time+simDt);}else if(!this.surfaceTransition){let remain=simDt;while(remain>0){const step=Math.min(remain,1/90),ev=this.model.step(step);this.recent.push(...ev);for(const event of ev){if(event.effective)this.bubbles.push({age:0,x:38+(Math.sin(event.time*21.79)+1)*14.5});this.dispatchEvent(new CustomEvent('lab-collision',{detail:{time:event.time,energy:event.energy,activationEnergy:event.ea,orientation:event.orientation,effective:event.effective},bubbles:true,composed:true}));}remain-=step;}for(const b of this.bubbles)b.age+=simDt;this.bubbles=this.bubbles.filter(b=>b.age<3.2);}}
-      if(this.model.time-(this.lastSampleTime??-1)>=.5){this.lastSampleTime=this.model.time;this.dispatchEvent(new CustomEvent('lab-sample',{detail:this.model.snapshot(),bubbles:true,composed:true}));}
-      // Path morphing is a control transition, independent of simulation playback.
-      this.displayEa=lerp(this.displayEa,this.model.ea,1-Math.exp(-dt*6));if(Math.abs(this.displayEa-this.model.ea)<.001)this.displayEa=this.model.ea;
-      this.uiClock+=dt;if(this.uiClock>.15){this.updateMeters();this.uiClock=0;}this.draw();this.frame=requestAnimationFrame(t=>this.tick(t));}
-    updateMeters(){const m=this.model;this.recent=this.recent.filter(e=>m.time-e.time<=10);const all=this.recent.length,good=this.recent.filter(e=>e.effective).length,scale=Math.max(25,all);this.$('all-bar').style.width=100*all/scale+'%';this.$('effective-bar').style.width=100*good/scale+'%';this.$('all-value').textContent=all;this.$('effective-value').textContent=good;this.$('rate-value').textContent=`${m.effective*2} products · ${m.time.toFixed(1)} s`;}
-    clear(id){const c=this.contexts[id];if(!c)return null;c.ctx.clearRect(0,0,c.w,c.h);return c;}
-    atom(ctx,x,y,r,type,alpha=1){
-      ctx.save();ctx.globalAlpha=alpha;ctx.fillStyle='#485e6520';ctx.beginPath();ctx.ellipse(x+1,y+r*.8,r*.95,r*.4,0,0,TAU);ctx.fill();
-      const palette=PARTICLE_PALETTES[type],tone=key=>palette[key];
-      const g=ctx.createRadialGradient(x-r*.32,y-r*.4,r*.06,x,y,r);g.addColorStop(0,tone('highlight'));g.addColorStop(.33,tone('light'));g.addColorStop(.77,tone('body'));g.addColorStop(1,tone('edge'));ctx.fillStyle=g;ctx.beginPath();ctx.arc(x,y,r,0,TAU);ctx.fill();ctx.strokeStyle=tone('edge');ctx.lineWidth=Math.max(.65,r*.065);ctx.stroke();ctx.restore();
-    }
-    bond(ctx,x1,y1,x2,y2,width=4,alpha=1,type=0){ctx.save();ctx.globalAlpha=alpha;ctx.lineWidth=width;ctx.lineCap='round';ctx.strokeStyle=PARTICLE_PALETTES[type].edge;ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();ctx.restore();}
-    molecule(ctx,x,y,angle,type,r=6,gap=9,alpha=1){const dx=Math.cos(angle)*gap,dy=Math.sin(angle)*gap;this.bond(ctx,x-dx/2,y-dy/2,x+dx/2,y+dy/2,r*.75,alpha,type);this.atom(ctx,x-dx/2,y-dy/2,r,type,alpha);this.atom(ctx,x+dx/2,y+dy/2,r,type,alpha);}
-    cube(ctx,s){const {x,y,side}=s,d=side*.22;ctx.save();ctx.fillStyle='#526b7320';ctx.beginPath();ctx.ellipse(x+side*.65,y+side+5,side*.7,side*.16,0,0,TAU);ctx.fill();ctx.fillStyle=PARTICLE_PALETTES[1].light;ctx.fillRect(x,y,side,side);ctx.fillStyle=PARTICLE_PALETTES[1].highlight;ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+d,y-d);ctx.lineTo(x+side+d,y-d);ctx.lineTo(x+side,y);ctx.closePath();ctx.fill();ctx.fillStyle=PARTICLE_PALETTES[1].body;ctx.beginPath();ctx.moveTo(x+side,y);ctx.lineTo(x+side+d,y-d);ctx.lineTo(x+side+d,y+side-d);ctx.lineTo(x+side,y+side);ctx.closePath();ctx.fill();const sites=Math.max(2,Math.round(side/18));for(let i=0;i<sites;i++)for(let j=0;j<sites;j++){const px=x+(i+.5)*side/sites,py=y+(j+.5)*side/sites;this.atom(ctx,px,py,Math.min(3.5,side/10),1,.65);}ctx.restore();}
-    draw(){this.drawParticles();this.drawEnergy();this.drawEnergySpread();this.drawRate();this.drawExperiment();if(this.replay)this.drawReplay();}
-    drawParticles(){const c=this.clear('particles');if(!c)return;const {ctx,w,h}=c;ctx.save();ctx.scale(w/W,h/H);ctx.strokeStyle='#9eafb023';ctx.lineWidth=1;for(let y=60;y<H;y+=44){ctx.beginPath();ctx.moveTo(15,y);ctx.lineTo(W-15,y);ctx.stroke();}for(let i=0;i<this.model.solids.length;i++){
-        const s=this.model.solids[i],transition=this.surfaceTransition;
-        if(transition){const t=ease(transition.time/.85),old=transition.from[Math.floor(i*transition.from.length/this.model.solids.length)]||s;this.cube(ctx,{side:s.side,x:lerp(old.x+(old.side-s.side)/2,s.x,t),y:lerp(old.y+(old.side-s.side)/2,s.y,t)});}else this.cube(ctx,s);
+    resize(){for(const id of ['particles','energy','energy-spread','rate','experiment','replay-canvas']){const canvas=this.$(id),r=canvas.getBoundingClientRect();if(!r.width||!r.height)continue;const dpr=Math.min(global.devicePixelRatio||1,2);const cw=Math.round(r.width*dpr),ch=Math.round(r.height*dpr);if(canvas.width!==cw||canvas.height!==ch){canvas.width=cw;canvas.height=ch;}const ctx=canvas.getContext('2d');const scale=this.displayScale||1;ctx.setTransform(dpr*scale,0,0,dpr*scale,0,0);this.contexts[id]={ctx,w:r.width/scale,h:r.height/scale};}this.draw();}
+    tick(now){
+      const dt=this.last?Math.min((now-this.last)/1000,.1):0;this.last=now;
+      this.visualClock+=dt;const simDt=dt*(this.slow?.25:1);
+      if(this.surfaceTransition){this.surfaceTransition.time+=this.reducedMotion?1:dt;if(this.surfaceTransition.time>=1.15)this.surfaceTransition=null;}
+      if(this.playing){
+        if(this.replay){this.replay.time=Math.min(7.3,this.replay.time+simDt);}
+        else if(!this.surfaceTransition){
+          // Fixed substeps preserve the original model at every display frame rate.
+          this.accumulator+=simDt;
+          while(this.accumulator>=1/120){
+            const step=1/120,ev=this.model.step(step);this.recent.push(...ev);
+            for(const event of ev){
+              if(!this.lastCollision||this.visualClock-this.collisionStamp>.85){this.lastCollision={...event,stamp:this.visualClock};this.collisionStamp=this.visualClock;}
+              if(event.effective)this.bubbles.push({age:0,x:38+(Math.sin(event.time*21.79)+1)*14.5});
+              this.dispatchEvent(new CustomEvent('lab-collision',{detail:{time:event.time,energy:event.energy,activationEnergy:event.ea,orientation:event.orientation,effective:event.effective},bubbles:true,composed:true}));
+            }
+            this.updateParticleVisuals(step);this.accumulator-=step;
+          }
+          for(const b of this.bubbles)b.age+=simDt;this.bubbles=this.bubbles.filter(b=>b.age<3.2);
+        }
       }
-      for(const p of this.model.particles){const speed=Math.hypot(p.vx,p.vy),tail=clamp(speed*.11,4,29);ctx.strokeStyle=colourAlpha(PARTICLE_PALETTES[p.type].body,.18);ctx.lineWidth=3;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(p.x-p.vx/speed*tail,p.y-p.vy/speed*tail);ctx.stroke();this.molecule(ctx,p.x,p.y,p.angle,p.type,6.5,9,p.cooldown>.25?.55:1);}
-      for(const e of this.model.effects){const a=e.age;if(!e.effective){ctx.strokeStyle=`rgba(138,153,158,${Math.max(0,1-a/.48)*.6})`;ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(e.x,e.y,8+a*32,0,TAU);ctx.stroke();continue;}ctx.strokeStyle=colourAlpha(PARTICLE_PALETTES[2].body,Math.max(0,1-a)*.65);ctx.lineWidth=2;ctx.beginPath();ctx.arc(e.x,e.y,10+a*30,0,TAU);ctx.stroke();for(const sign of [-1,1]){const y=e.y+sign*(8+a*28),x=e.x+a*14,alpha=Math.min(1,(1.15-a)*2);this.bond(ctx,x-5,y,x+5,y,4,alpha,2);this.atom(ctx,x-5,y,6.5,0,alpha);this.atom(ctx,x+5,y,6.5,1,alpha);}}
-      ctx.restore();}
-    drawEnergy(){const c=this.clear('energy');if(!c)return;const {ctx,w,h}=c,left=32,right=w-12,base=h-39,react=base-35,prod=base-12,peak=react-this.displayEa*51,peakX=left+(right-left)*.49;
-      ctx.font='10px "Segoe UI",sans-serif';ctx.fillStyle=COLORS.muted;ctx.fillText('Energy (relative)',left,13);ctx.strokeStyle=COLORS.line;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(left,25);ctx.lineTo(left,base+4);ctx.lineTo(right,base+4);ctx.stroke();
-      const curve=(py,color,dash)=>{ctx.strokeStyle=color;ctx.lineWidth=2;ctx.setLineDash(dash);ctx.beginPath();ctx.moveTo(left,react);ctx.lineTo(left+(right-left)*.15,react);ctx.bezierCurveTo(left+(right-left)*.26,react,peakX-(right-left)*.13,py,peakX,py);ctx.bezierCurveTo(peakX+(right-left)*.14,py,right-(right-left)*.23,prod,right-(right-left)*.14,prod);ctx.lineTo(right,prod);ctx.stroke();ctx.setLineDash([]);};
-      if(this.model.factor==='catalyst'&&(this.model.ea<1||this.displayEa<1.44))curve(react-1.45*51,'#a0b0b0',[4,4]);curve(peak,'#5c8579',[]);
-      ctx.strokeStyle='#7c9b8d';ctx.lineWidth=1;const ax=peakX-7;ctx.setLineDash([3,3]);ctx.beginPath();ctx.moveTo(left,react);ctx.lineTo(peakX+7,react);ctx.stroke();ctx.setLineDash([]);ctx.beginPath();ctx.moveTo(ax,react-2);ctx.lineTo(ax,peak+4);ctx.moveTo(ax-3,peak+8);ctx.lineTo(ax,peak+3);ctx.lineTo(ax+3,peak+8);ctx.moveTo(ax-3,react-7);ctx.lineTo(ax,react-2);ctx.lineTo(ax+3,react-7);ctx.stroke();ctx.fillStyle=COLORS.ink;ctx.font='12px Georgia,serif';ctx.fillText('Eₐ',ax+6,(react+peak)/2+4);ctx.font='10px "Segoe UI",sans-serif';ctx.fillText('Reactants',left+3,react-9);ctx.textAlign='right';ctx.fillText('Products',right,prod+17);ctx.textAlign='center';ctx.fillStyle=COLORS.muted;ctx.fillText('Reaction pathway →',(left+right)/2,h-3);ctx.textAlign='left';
-
+      if(this.model.time-(this.lastSampleTime??-1)>=.5){this.lastSampleTime=this.model.time;this.dispatchEvent(new CustomEvent('lab-sample',{detail:this.model.snapshot(),bubbles:true,composed:true}));}
+      const blend=this.reducedMotion?1:1-Math.exp(-dt*6);
+      this.displayEa=lerp(this.displayEa,this.model.ea,blend);if(Math.abs(this.displayEa-this.model.ea)<.001)this.displayEa=this.model.ea;
+      this.displayTemperature=lerp(this.displayTemperature,this.model.temperature,blend);
+      this.uiClock+=dt;if(this.uiClock>.15){this.updateMeters();this.uiClock=0;}
+      this.draw();this.frame=requestAnimationFrame(t=>this.tick(t));
     }
+    updateMeters(){const m=this.model;this.recent=this.recent.filter(e=>m.time-e.time<=10);const all=this.recent.length,good=this.recent.filter(e=>e.effective).length,scale=Math.max(25,all);this.$('all-bar').style.width=100*all/scale+'%';this.$('effective-bar').style.width=100*good/scale+'%';this.$('all-value').textContent=all;this.$('effective-value').textContent=good;this.$('rate-value').textContent=this.t(`${m.effective*2} products · ${m.time.toFixed(1)} s`);}
+    clear(id){const c=this.contexts[id];if(!c)return null;c.ctx.clearRect(0,0,c.w,c.h);return c;}
+    // Stable procedural variation belongs to the renderer, not the model RNG.
+    visualHash(n){const x=Math.sin(n*127.1+311.7)*43758.5453;return x-Math.floor(x);}
+    particleVisual(p,i=0){
+      let v=this.visuals.get(p);if(!v){v={depth:this.visualHash(i+3),variant:Math.floor(this.visualHash(i+8)*3),prevX:p.x,prevY:p.y,prevAngle:p.angle,x:p.x,y:p.y,fade:1};this.visuals.set(p,v);}return v;
+    }
+    updateParticleVisuals(dt){
+      this.model.particles.forEach((p,i)=>{const v=this.particleVisual(p,i);
+        const replenished=Math.hypot(p.x-v.x,p.y-v.y)>Math.max(35,Math.hypot(p.vx,p.vy)*dt*4);
+        v.prevX=replenished?p.x:v.x;v.prevY=replenished?p.y:v.y;v.prevAngle=p.angle-p.spin*dt;
+        v.x=p.x;v.y=p.y;if(replenished)v.fade=0;else v.fade=Math.min(1,v.fade+dt*2.8);
+      });
+    }
+    drawParticleShadow(ctx,x,y,r,alpha=1){
+      ctx.save();ctx.globalAlpha*=alpha;ctx.fillStyle='#304b4225';ctx.beginPath();ctx.ellipse(x+r*.17,y+r*.77,r*.9,r*.29,0,0,TAU);ctx.fill();ctx.restore();
+    }
+    atomMaterial(type,variant=0){
+      const key='atom:'+type+':'+variant;if(this.materials.has(key))return this.materials.get(key);
+      const canvas=document.createElement('canvas');canvas.width=canvas.height=192;
+      const ctx=canvas.getContext('2d'),x=96,y=96,r=78,p=PARTICLE_PALETTES[type];
+      const light=ctx.createRadialGradient(x-r*.35,y-r*.42,r*.03,x-r*.08,y-r*.07,r*1.1);
+      light.addColorStop(0,p.highlight);light.addColorStop(.25,p.light);light.addColorStop(.56,p.body);light.addColorStop(.85,p.edge);light.addColorStop(1,p.edge);
+      ctx.fillStyle=light;ctx.beginPath();ctx.arc(x,y,r,0,TAU);ctx.fill();ctx.save();ctx.clip();
+      // Extremely fine, deterministic material grain; generated once per material.
+      for(let i=0;i<150;i++){const a=this.visualHash(i+variant*41)*TAU,d=Math.sqrt(this.visualHash(i+77))*r;ctx.fillStyle=i%2?'#ffffff09':'#20392e08';ctx.beginPath();ctx.arc(x+Math.cos(a)*d,y+Math.sin(a)*d,.6+this.visualHash(i+31)*1.1,0,TAU);ctx.fill();}
+      const spec=ctx.createRadialGradient(x-r*.32,y-r*.44,0,x-r*.32,y-r*.44,r*.35);spec.addColorStop(0,'#ffffffd9');spec.addColorStop(.3,'#ffffff68');spec.addColorStop(1,'#ffffff00');ctx.fillStyle=spec;ctx.fillRect(0,0,192,192);
+      ctx.strokeStyle='#ffffff2b';ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y,r-3,Math.PI*1.02,Math.PI*1.65);ctx.stroke();ctx.restore();
+      ctx.strokeStyle=colourAlpha(p.edge,.55);ctx.lineWidth=1;ctx.beginPath();ctx.arc(x,y,r,0,TAU);ctx.stroke();
+      this.materials.set(key,canvas);return canvas;
+    }
+    drawAtom(ctx,x,y,r,type,alpha=1,variant=0){
+      ctx.save();ctx.globalAlpha*=clamp(alpha,0,1);this.drawParticleShadow(ctx,x,y,r,.7);
+      const size=r*192/78;ctx.drawImage(this.atomMaterial(type,variant),x-size/2,y-size/2,size,size);ctx.restore();
+    }
+    atom(ctx,x,y,r,type,alpha=1){this.drawAtom(ctx,x,y,r,type,alpha);}
+    drawBond(ctx,x1,y1,x2,y2,width=4,alpha=1,type=2){
+      if(alpha<=0)return;ctx.save();ctx.globalAlpha*=alpha;ctx.lineCap='round';
+      ctx.strokeStyle=PARTICLE_PALETTES[type].edge;ctx.lineWidth=width;ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();
+      ctx.strokeStyle=PARTICLE_PALETTES[type].light;ctx.lineWidth=width*.46;ctx.beginPath();ctx.moveTo(x1,y1-width*.12);ctx.lineTo(x2,y2-width*.12);ctx.stroke();
+      ctx.strokeStyle='#ffffff50';ctx.lineWidth=Math.max(.5,width*.13);ctx.beginPath();ctx.moveTo(x1,y1-width*.23);ctx.lineTo(x2,y2-width*.23);ctx.stroke();ctx.restore();
+    }
+    bond(ctx,x1,y1,x2,y2,width=4,alpha=1,type=0){this.drawBond(ctx,x1,y1,x2,y2,width,alpha,type);}
+    drawMolecule(ctx,x,y,angle,type,r=7,gap=11,alpha=1,variant=0,compression=0){
+      const dx=Math.cos(angle)*gap,dy=Math.sin(angle)*gap;
+      ctx.save();ctx.translate(x,y);ctx.scale(1-compression,1+compression*.45);
+      this.drawBond(ctx,-dx/2,-dy/2,dx/2,dy/2,r*.65,alpha,type);
+      // The back atom is drawn first; light direction remains fixed in chamber space.
+      const order=dy>0?[-1,1]:[1,-1];for(const sign of order)this.drawAtom(ctx,sign*dx/2,sign*dy/2,r,type,alpha,variant);
+      ctx.restore();
+    }
+    molecule(ctx,x,y,angle,type,r=7,gap=11,alpha=1){this.drawMolecule(ctx,x,y,angle,type,r,gap,alpha);}
+    chamberMaterial(w,h){
+      const key=Math.round(w)+':'+Math.round(h);if(this.chambers.has(key))return this.chambers.get(key);
+      // Backplate is static and rendered at capped high DPI, then reused every frame.
+      const canvas=document.createElement('canvas'),dpi=2;canvas.width=Math.round(w*dpi);canvas.height=Math.round(h*dpi);const ctx=canvas.getContext('2d');ctx.scale(dpi,dpi);
+      const bg=ctx.createLinearGradient(0,0,w*.35,h);bg.addColorStop(0,'#f3f8f4');bg.addColorStop(.5,'#e6efec');bg.addColorStop(1,'#d8e5e2');ctx.fillStyle=bg;ctx.fillRect(0,0,w,h);
+      const pool=ctx.createRadialGradient(w*.38,h*.3,5,w*.45,h*.45,w*.65);pool.addColorStop(0,'#ffffff9c');pool.addColorStop(.7,'#ffffff00');pool.addColorStop(1,'#839f9522');ctx.fillStyle=pool;ctx.fillRect(0,0,w,h);
+      const floor=ctx.createLinearGradient(0,h*.75,0,h);floor.addColorStop(0,'#47685b00');floor.addColorStop(1,'#47685b12');ctx.fillStyle=floor;ctx.fillRect(0,h*.75,w,h*.25);
+      ctx.strokeStyle='#718e8122';ctx.lineWidth=1;ctx.beginPath();ctx.roundRect(12,12,w-24,h-24,11);ctx.stroke();
+      ctx.strokeStyle='#ffffffa3';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(23,h-32);ctx.lineTo(23,29);ctx.quadraticCurveTo(23,22,30,22);ctx.lineTo(w-35,22);ctx.stroke();
+      ctx.strokeStyle='#5e7c7025';ctx.beginPath();ctx.moveTo(16,h-16);ctx.lineTo(w-20,h-16);ctx.lineTo(w-20,38);ctx.stroke();
+      // Sparse chamber calibration ticks, kept outside the teaching content.
+      ctx.strokeStyle='#54786928';ctx.lineWidth=.8;for(let y=68;y<h-30;y+=32){ctx.beginPath();ctx.moveTo(12,y);ctx.lineTo(y%64===4?20:17,y);ctx.stroke();}
+      if(this.chambers.size>5)this.chambers.clear();this.chambers.set(key,canvas);return canvas;
+    }
+    drawChamber(ctx,w,h){ctx.drawImage(this.chamberMaterial(w,h),0,0,w,h);}
+    solidMaterial(){
+      if(this.materials.has('solid'))return this.materials.get('solid');
+      const c=document.createElement('canvas');c.width=320;c.height=330;const ctx=c.getContext('2d');ctx.scale(2,2);const x=12,y=38,s=112,d=24;
+      const shadow=ctx.createRadialGradient(x+s*.63,y+s+3,3,x+s*.63,y+s+3,s*.67);shadow.addColorStop(0,'#384d4935');shadow.addColorStop(1,'#384d4900');ctx.fillStyle=shadow;ctx.save();ctx.translate(0,y+s-22);ctx.scale(1,.28);ctx.fillRect(0,0,160,130);ctx.restore();
+      const front=ctx.createLinearGradient(x,y,x+s,y+s);front.addColorStop(0,'#b5aacd');front.addColorStop(.5,'#9185ae');front.addColorStop(1,'#73658e');ctx.fillStyle=front;ctx.fillRect(x,y,s,s);
+      ctx.fillStyle='#cec5e0';ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+d,y-d);ctx.lineTo(x+s+d,y-d);ctx.lineTo(x+s,y);ctx.closePath();ctx.fill();
+      const side=ctx.createLinearGradient(x+s,y,x+s+d,y+s);side.addColorStop(0,'#76688d');side.addColorStop(1,'#55496a');ctx.fillStyle=side;ctx.beginPath();ctx.moveTo(x+s,y);ctx.lineTo(x+s+d,y-d);ctx.lineTo(x+s+d,y+s-d);ctx.lineTo(x+s,y+s);ctx.closePath();ctx.fill();
+      // Crystal-like facets and mineral grain, deterministic and cached.
+      ctx.save();ctx.beginPath();ctx.rect(x,y,s,s);ctx.clip();
+      for(let i=0;i<110;i++){const px=x+this.visualHash(i)*s,py=y+this.visualHash(i+901)*s;ctx.fillStyle=i%3?'#f1e9ff14':'#3e315319';ctx.beginPath();ctx.moveTo(px,py);ctx.lineTo(px+3+this.visualHash(i+7)*9,py-2);ctx.lineTo(px+4,py+7);ctx.closePath();ctx.fill();}
+      ctx.strokeStyle='#ffffff13';ctx.lineWidth=.7;for(let i=1;i<6;i++){ctx.beginPath();ctx.moveTo(x+i*s/6,y);ctx.lineTo(x+i*s/6,y+s);ctx.moveTo(x,y+i*s/6);ctx.lineTo(x+s,y+i*s/6);ctx.stroke();}ctx.restore();
+      ctx.strokeStyle='#efe8fc9e';ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(x,y+s);ctx.lineTo(x,y);ctx.lineTo(x+s,y);ctx.lineTo(x+s+d,y-d);ctx.stroke();
+      this.materials.set('solid',c);return c;
+    }
+    drawSolidPiece(ctx,s,sites=true,alpha=1){
+      const scale=s.side/112;ctx.save();ctx.globalAlpha*=alpha;ctx.drawImage(this.solidMaterial(),s.x-12*scale,s.y-38*scale,160*scale,165*scale);
+      if(sites){const n=Math.max(2,Math.round(s.side/19));for(let i=0;i<n;i++)for(let j=0;j<n;j++){
+        const x=s.x+(i+.5)*s.side/n,y=s.y+(j+.5)*s.side/n,r=Math.min(3.2,s.side/13);this.drawAtom(ctx,x,y,r,1,.72,(i+j)%3);
+      }
+      for(let i=0;i<n;i++){const d=s.side*.215;this.drawAtom(ctx,s.x+(i+.5)*s.side/n+d*.55,s.y-d*.55,Math.min(2.6,s.side/15),1,.75,i%3);}}
+      ctx.restore();
+    }
+    cube(ctx,s){this.drawSolidPiece(ctx,s);}
+    makeSolidTransition(from,to,oldN,newN){
+      // Use equal-volume microcubes for split AND merge, including the 2↔3 case.
+      // 6³ cells always represent the same original 96³ solid volume.
+      const unit=96/6,cells=[];
+      const locate=(pieces,n,index)=>{const q=6/n,per=q**3,piece=pieces[Math.floor(index/per)],local=index%per,ix=local%q,iy=Math.floor(local/q)%q,iz=Math.floor(local/(q*q));
+        return {x:piece.x+ix*unit+iz*unit*.215,y:piece.y+iy*unit-iz*unit*.215};};
+      for(let i=0;i<216;i++)cells.push({from:locate(from,oldN,i),to:locate(to,newN,i)});
+      return {time:0,from,to,cells,unit};
+    }
+    drawSolids(ctx){
+      const transition=this.surfaceTransition;
+      if(!transition){for(const s of this.model.solids)this.drawSolidPiece(ctx,s);return;}
+      const t=ease(transition.time/1.15);
+      // Full pieces crossfade only at the endpoints, revealing their subdivisions.
+      const reveal=transition.resume?1:ease(transition.time/.16),join=ease((transition.time-.95)/.2);
+      if(reveal<1)for(const s of transition.from)this.drawSolidPiece(ctx,s,true,1-reveal);
+      const alpha=reveal*(1-join);
+      if(alpha>0)for(const cell of transition.cells)this.drawSolidPiece(ctx,{x:lerp(cell.from.x,cell.to.x,t),y:lerp(cell.from.y,cell.to.y,t),side:transition.unit},false,alpha);
+      if(join>0)for(const s of transition.to)this.drawSolidPiece(ctx,s,true,join);
+    }
+    drawCollisionEffect(ctx,e){
+      const t=e.age,good=e.effective;
+      if(!good){
+        // A localized contact glint; never an expanding ripple or product.
+        const a=Math.max(0,1-t/.22);if(!a)return;ctx.save();ctx.globalAlpha=a*.8;ctx.strokeStyle='#faffed';ctx.lineWidth=1.4;ctx.lineCap='round';
+        for(const sign of [-1,1]){ctx.beginPath();ctx.moveTo(e.x+sign*3,e.y-2);ctx.lineTo(e.x+sign*6,e.y-5);ctx.stroke();}ctx.restore();return;
+      }
+      const reform=ease((t-.07)/.33),depart=ease((t-.38)/.6),alpha=clamp((1.15-t)/.28,0,1),r=6.9;
+      const points=[];for(let type=0;type<2;type++)for(const sign of [-1,1]){
+        const angle=e.angles[type]??Math.PI/2,initialX=e.x+(type?11.5:-11.5)+sign*Math.cos(angle)*7.65,initialY=e.y+sign*Math.sin(angle)*7.65;
+        points.push({x:lerp(initialX,e.x+(type?6:-6)+depart*11,reform),y:lerp(initialY,e.y+sign*(9+depart*27),reform),type});
+      }
+      const old=1-ease(t/.26);for(let i=0;i<4;i+=2)this.drawBond(ctx,points[i].x,points[i].y,points[i+1].x,points[i+1].y,4,old*alpha,i/2);
+      for(let i=0;i<2;i++)this.drawBond(ctx,points[i].x,points[i].y,points[i+2].x,points[i+2].y,4,reform*alpha,2);
+      for(const p of points)this.drawAtom(ctx,p.x,p.y,r,p.type,alpha);
+      this.drawContactLight(ctx,e.x,e.y,t,1);
+    }
+    drawContactLight(ctx,x,y,t,strength=1){
+      if(t<0||t>.38)return;const a=Math.sin(Math.PI*clamp(t/.38,0,1))*strength;
+      // Cached neutral light stamps avoid rebuilding gradients for each impact.
+      if(!this.materials.has('light')){const c=document.createElement('canvas');c.width=c.height=128;const gctx=c.getContext('2d'),g=gctx.createRadialGradient(64,64,0,64,64,64);g.addColorStop(0,'#ffffffee');g.addColorStop(.18,'#f7ffe4b0');g.addColorStop(.5,'#edf7ca30');g.addColorStop(1,'#edf7ca00');gctx.fillStyle=g;gctx.fillRect(0,0,128,128);this.materials.set('light',c);}
+      ctx.save();ctx.globalAlpha*=a*.7;const size=40*strength;ctx.drawImage(this.materials.get('light'),x-size/2,y-size/2,size,size);
+      ctx.globalAlpha*=.7;ctx.strokeStyle='#fffdee';ctx.lineWidth=.9;ctx.lineCap='round';
+      for(let i=0;i<5;i++){const angle=i*TAU/5+.4,d=5+t*24,len=2*(1-t/.38);ctx.beginPath();ctx.moveTo(x+Math.cos(angle)*d,y+Math.sin(angle)*d);ctx.lineTo(x+Math.cos(angle)*(d+len),y+Math.sin(angle)*(d+len));ctx.stroke();}ctx.restore();
+    }
+    draw(){this.drawParticles();this.drawEnergy();this.drawEnergySpread();this.drawRate();this.drawExperiment();if(this.replay)this.drawReplay();}
+    drawParticles(){
+      const c=this.clear('particles');if(!c)return;const {ctx,w,h}=c;ctx.save();
+      // A uniform camera transform keeps atoms spherical on responsive layouts.
+      this.drawChamber(ctx,w,h);const scale=Math.min(w/W,h/H),ox=(w-W*scale)/2,oy=(h-H*scale)/2;ctx.translate(ox,oy);ctx.scale(scale,scale);
+      const phase=clamp(this.accumulator*120,0,1),particles=this.model.particles.map((p,i)=>({p,v:this.particleVisual(p,i)}));
+      const layer=(low,high)=>{for(const {p,v} of particles){if(v.depth<low||v.depth>=high)continue;
+        const x=lerp(v.prevX,p.x,phase),y=lerp(v.prevY,p.y,phase),angle=lerp(v.prevAngle,p.angle,phase),z=.88+v.depth*.23,alpha=(.63+.37*v.depth)*ease(v.fade);
+        const speed=Math.hypot(p.vx,p.vy),tail=clamp((speed-35)*.042,0,12)*(1+v.variant*.13);
+        // Short, varied velocity cues; thermal speed still comes solely from the model.
+        if(tail>1&&v.fade>.8){ctx.save();ctx.globalAlpha=alpha;ctx.strokeStyle=colourAlpha(PARTICLE_PALETTES[p.type].body,.1);ctx.lineWidth=1.5;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x-p.vx/speed*tail,y-p.vy/speed*tail);ctx.stroke();ctx.restore();}
+        let compression=0;for(const e of this.model.effects)if(!e.effective&&e.age<.13&&Math.hypot(x-e.x,y-e.y)<27)compression=Math.max(compression,.09*(1-e.age/.13));
+        this.drawMolecule(ctx,x,y,angle,p.type,6.9*z,15.3*z,alpha,v.variant,compression);
+      }};
+      // Ordered layers provide depth without altering planar collision coordinates.
+      layer(0,.3);this.drawSolids(ctx);layer(.3,.8);
+      for(const e of this.model.effects){this.drawCollisionEffect(ctx,e);if(e.effective&&e.age<.32){for(const {p,v} of particles){const d=Math.hypot(p.x-e.x,p.y-e.y);if(d>24&&d<55){ctx.fillStyle=colourAlpha('#fbffe8',(1-e.age/.32)*(1-d/55)*.45);ctx.beginPath();ctx.arc(p.x,p.y,7,0,TAU);ctx.fill();}}}}
+      layer(.8,1.01);
+      if(this.labels&&this.model.factor==='surface'){ctx.font='11px "Segoe UI",sans-serif';ctx.textAlign='center';ctx.fillStyle='#566e62';ctx.fillText(this.t('Same solid volume · '+this.model.n+'× exposed area'),W/2,H-21);ctx.textAlign='left';}
+      ctx.restore();
+    }
+    collisionReading(){
+      if(this.replay){const r=this.replay;if(r.time<1.85)return null;return {energy:r.kind==='low'?this.model.ea*.55:this.model.ea*1.34,ea:this.model.ea,orientation:r.kind!=='wrong',effective:r.kind==='success',alpha:1,progress:ease((r.time-1.85)/.8)};}
+      if(!this.lastCollision)return null;const age=this.visualClock-this.lastCollision.stamp;if(age>1.8)return null;
+      return {...this.lastCollision,alpha:clamp((1.8-age)/.45,0,1),progress:ease(age/.28)};
+    }
+    energyProfilePath(ctx,left,right,react,prod,py){
+      const span=right-left,peakX=left+span*.49;ctx.moveTo(left,react);ctx.lineTo(left+span*.15,react);
+      ctx.bezierCurveTo(left+span*.26,react,peakX-span*.13,py,peakX,py);
+      ctx.bezierCurveTo(peakX+span*.14,py,right-span*.23,prod,right-span*.14,prod);ctx.lineTo(right,prod);
+    }
+    drawEnergyProfile(ctx,c){
+      const {w,h}=c,left=32,right=w-17,span=right-left,base=h-36,react=base-38,prod=base-12,unit=51,peak=react-this.displayEa*unit,peakX=left+span*.49,cat=this.model.factor==='catalyst';
+      ctx.font='10px "Segoe UI",sans-serif';ctx.fillStyle=COLORS.muted;ctx.fillText(this.t('Potential energy'),left,13);
+      ctx.strokeStyle='#d5dfd3';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(left,29);ctx.lineTo(left,base+4);ctx.lineTo(right,base+4);ctx.stroke();
+      const curve=(ea,color,dash=[],fill=false,alpha=1)=>{ctx.save();ctx.globalAlpha=alpha;ctx.beginPath();this.energyProfilePath(ctx,left,right,react,prod,react-ea*unit);
+        if(fill){ctx.lineTo(right,base);ctx.lineTo(left,base);ctx.closePath();const g=ctx.createLinearGradient(0,peak,0,base);g.addColorStop(0,'#a2c7b437');g.addColorStop(1,'#a2c7b407');ctx.fillStyle=g;ctx.fill();ctx.beginPath();this.energyProfilePath(ctx,left,right,react,prod,react-ea*unit);}
+        ctx.strokeStyle=color;ctx.lineWidth=2.2;ctx.lineJoin='round';ctx.setLineDash(dash);ctx.stroke();ctx.restore();};
+      if(cat){curve(1.45,'#8e9ea3',[4,4],false,.85);curve(.58,'#659882',[],false,this.model.ea<1?.8:.28);}
+      curve(this.displayEa,'#396f5b',[],true);
+      ctx.strokeStyle='#7b9c88';ctx.lineWidth=1;ctx.setLineDash([3,4]);ctx.beginPath();ctx.moveTo(left,react);ctx.lineTo(peakX+15,react);ctx.stroke();ctx.setLineDash([]);
+      const ax=peakX;ctx.beginPath();ctx.moveTo(ax,react-2);ctx.lineTo(ax,peak+4);ctx.moveTo(ax-3,peak+8);ctx.lineTo(ax,peak+3);ctx.lineTo(ax+3,peak+8);ctx.stroke();
+      ctx.fillStyle='#35574b';ctx.font='italic 13px Georgia,serif';ctx.fillText(this.t('Eₐ'),ax+6,(react+peak)/2+3);
+      ctx.font='10px "Segoe UI",sans-serif';ctx.fillStyle=COLORS.ink;ctx.fillText(this.t('Reactants'),left+3,react-10);ctx.textAlign='right';ctx.fillText(this.t('Products'),right,prod+17);ctx.textAlign='center';ctx.fillStyle=COLORS.muted;ctx.fillText(this.t('Reaction pathway →'),(left+right)/2,h-3);ctx.textAlign='left';
+      const reading=this.collisionReading();if(reading){
+        ctx.save();ctx.globalAlpha=reading.alpha;const pass=reading.energy>=reading.ea,color=pass?'#46795b':'#aa7d62';ctx.fillStyle=color;ctx.font='10px "Segoe UI",sans-serif';
+        ctx.fillText(this.t('Collision E '+reading.energy.toFixed(2)+(pass?' ≥ Eₐ':' < Eₐ')),left,28);
+        ctx.restore();
+      }
+    }
+    drawEnergy(){const c=this.clear('energy');if(c)this.drawEnergyProfile(c.ctx,c);}
     drawEnergySpread(){
-      const c=this.clear('energy-spread');if(!c)return;
-      const {ctx,w,h}=c,left=32,right=w-12,bottom=h-20,temperature=this.model.temperature;
-      // Normalized 2D energy distribution, consistent with the qualitative kinetic model.
-      const x=e=>left+e/7*(right-left),y=e=>bottom-29/temperature*Math.exp(-e/temperature);
-      ctx.font='10px "Segoe UI",sans-serif';ctx.fillStyle=COLORS.muted;ctx.fillText('Energy spread',left,11);
-      ctx.textAlign='right';ctx.fillText('Shaded: energy ≥ Eₐ',right,11);ctx.textAlign='left';
-      ctx.beginPath();ctx.moveTo(x(this.displayEa),bottom);for(let e=this.displayEa;e<=7;e+=.04)ctx.lineTo(x(e),y(e));ctx.lineTo(right,bottom);ctx.closePath();ctx.fillStyle='#acc7b795';ctx.fill();
-      ctx.strokeStyle='#8ca3aa';ctx.lineWidth=1.5;ctx.beginPath();for(let e=0;e<=7;e+=.04){if(e===0)ctx.moveTo(x(e),y(e));else ctx.lineTo(x(e),y(e));}ctx.stroke();
-      ctx.strokeStyle='#718e79';ctx.setLineDash([3,3]);ctx.beginPath();ctx.moveTo(x(this.displayEa),bottom-32);ctx.lineTo(x(this.displayEa),bottom);ctx.stroke();ctx.setLineDash([]);ctx.fillStyle=COLORS.ink;ctx.fillText('Eₐ',x(this.displayEa)+3,bottom-25);
-      ctx.strokeStyle=COLORS.line;ctx.beginPath();ctx.moveTo(left,bottom);ctx.lineTo(right,bottom);ctx.stroke();ctx.textAlign='center';ctx.fillStyle=COLORS.muted;ctx.fillText('Kinetic energy →',(left+right)/2,h-3);ctx.textAlign='left';
+      const c=this.clear('energy-spread');if(!c)return;const {ctx,w,h}=c,left=32,right=w-17,bottom=h-30,temperature=this.displayTemperature;
+      // Original normalized 2D thermal distribution; only its display morphs.
+      const x=e=>left+e/7*(right-left),y=e=>bottom-30/temperature*Math.exp(-e/temperature);
+      ctx.font='10px "Segoe UI",sans-serif';ctx.fillStyle=COLORS.muted;ctx.fillText(this.t('Kinetic energy distribution'),left,11);
+      ctx.beginPath();ctx.moveTo(x(this.displayEa),bottom);for(let e=this.displayEa;e<=7;e+=.025)ctx.lineTo(x(e),y(e));ctx.lineTo(right,bottom);ctx.closePath();
+      const fill=ctx.createLinearGradient(0,bottom-32,0,bottom);fill.addColorStop(0,'#7faa8980');fill.addColorStop(1,'#b9d0b84a');ctx.fillStyle=fill;ctx.fill();
+      ctx.strokeStyle='#819ca0';ctx.lineWidth=1.7;ctx.beginPath();for(let e=0;e<=7;e+=.025){if(e===0)ctx.moveTo(x(e),y(e));else ctx.lineTo(x(e),y(e));}ctx.stroke();
+      if(this.model.factor==='catalyst'){ctx.strokeStyle='#9ba9ad';ctx.setLineDash([2,3]);ctx.beginPath();ctx.moveTo(x(1.45),bottom-37);ctx.lineTo(x(1.45),bottom);ctx.stroke();ctx.setLineDash([]);}
+      ctx.strokeStyle='#507a5d';ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(x(this.displayEa),bottom-34);ctx.lineTo(x(this.displayEa),bottom);ctx.stroke();ctx.fillStyle='#41654a';ctx.fillText(this.t('Eₐ'),x(this.displayEa)+4,bottom-27);
+      ctx.strokeStyle=COLORS.line;ctx.beginPath();ctx.moveTo(left,bottom);ctx.lineTo(right,bottom);ctx.stroke();
+      ctx.textAlign='center';ctx.font='9px "Segoe UI",sans-serif';ctx.fillStyle=COLORS.muted;ctx.fillText(this.t('Kinetic energy →  ·  shaded fraction ≥ Eₐ'),(left+right)/2,h-2,w-16);ctx.textAlign='left';
     }
+
     drawRate(){const c=this.clear('rate');if(!c)return;const {ctx,w,h}=c,m=this.model,left=30,right=w-9,top=17,bottom=h-20,points=m.series,maxX=Math.max(10,m.time),minX=Math.max(0,maxX-60),minY=points[0]?.products||0,maxY=Math.max(minY+8,...points.map(p=>p.products));
-      const x=t=>left+(t-minX)/(maxX-minX)*(right-left),y=v=>bottom-(v-minY)/(maxY-minY)*(bottom-top);ctx.font='9px "Segoe UI",sans-serif';ctx.fillStyle=COLORS.muted;ctx.fillText('Products',left,10);ctx.strokeStyle=COLORS.line;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(left,top);ctx.lineTo(left,bottom);ctx.lineTo(right,bottom);ctx.stroke();ctx.textAlign='right';ctx.fillText(String(minY),left-6,bottom+3);ctx.fillText(String(maxY),left-6,top+3);ctx.textAlign='left';ctx.fillText(minX.toFixed(0),left,bottom+13);ctx.textAlign='right';ctx.fillText(maxX.toFixed(0)+' s',right,bottom+13);ctx.textAlign='center';ctx.fillText('Simulation time',(left+right)/2,bottom+13);ctx.textAlign='left';ctx.save();ctx.beginPath();ctx.rect(left,top,right-left,bottom-top);ctx.clip();ctx.strokeStyle='#5c8579';ctx.lineWidth=2;ctx.lineJoin='round';ctx.beginPath();points.forEach((p,i)=>{if(i===0)ctx.moveTo(x(p.time),y(p.products));else{ctx.lineTo(x(p.time),y(points[i-1].products));ctx.lineTo(x(p.time),y(p.products));}});ctx.lineTo(x(m.time),y(m.effective*2));ctx.stroke();ctx.restore();}
+      const x=t=>left+(t-minX)/(maxX-minX)*(right-left),y=v=>bottom-(v-minY)/(maxY-minY)*(bottom-top);ctx.font='9px "Segoe UI",sans-serif';ctx.fillStyle=COLORS.muted;ctx.fillText(this.t('Products'),left,10);ctx.strokeStyle=COLORS.line;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(left,top);ctx.lineTo(left,bottom);ctx.lineTo(right,bottom);ctx.stroke();ctx.textAlign='right';ctx.fillText(this.t(String(minY)),left-6,bottom+3);ctx.fillText(this.t(String(maxY)),left-6,top+3);ctx.textAlign='left';ctx.fillText(this.t(minX.toFixed(0)),left,bottom+13);ctx.textAlign='right';ctx.fillText(this.t(maxX.toFixed(0)+' s'),right,bottom+13);ctx.textAlign='center';ctx.fillText(this.t('Simulation time'),(left+right)/2,bottom+13);ctx.textAlign='left';ctx.save();ctx.beginPath();ctx.rect(left,top,right-left,bottom-top);ctx.clip();ctx.strokeStyle='#5c8579';ctx.lineWidth=2;ctx.lineJoin='round';ctx.beginPath();points.forEach((p,i)=>{if(i===0)ctx.moveTo(x(p.time),y(p.products));else{ctx.lineTo(x(p.time),y(points[i-1].products));ctx.lineTo(x(p.time),y(p.products));}});ctx.lineTo(x(m.time),y(m.effective*2));ctx.stroke();ctx.restore();}
     drawExperiment(){const c=this.clear('experiment');if(!c)return;const {ctx,w,h}=c;ctx.save();ctx.scale(w/108,h/110);ctx.fillStyle='#b9ccc638';ctx.beginPath();ctx.ellipse(54,94,36,8,0,0,TAU);ctx.fill();ctx.fillStyle='#c1d8d3a0';ctx.beginPath();ctx.moveTo(34,55);ctx.lineTo(21,85);ctx.quadraticCurveTo(21,91,29,91);ctx.lineTo(79,91);ctx.quadraticCurveTo(87,91,87,85);ctx.lineTo(74,55);ctx.closePath();ctx.fill();ctx.strokeStyle='#809b9a';ctx.lineWidth=1.6;ctx.beginPath();ctx.moveTo(43,18);ctx.lineTo(43,36);ctx.lineTo(20,84);ctx.quadraticCurveTo(17,94,30,94);ctx.lineTo(79,94);ctx.quadraticCurveTo(91,94,88,84);ctx.lineTo(65,36);ctx.lineTo(65,18);ctx.stroke();ctx.beginPath();ctx.ellipse(54,18,11,3,0,0,TAU);ctx.stroke();ctx.strokeStyle='#b2c5c0';ctx.beginPath();ctx.ellipse(54,55,20,3,0,0,Math.PI);ctx.stroke();for(const b of this.bubbles){ctx.strokeStyle=colourAlpha(PARTICLE_PALETTES[2].body,.56);ctx.beginPath();ctx.arc(b.x+Math.sin(b.age*4)*3,83-b.age*20,2+Math.min(b.age,2),0,TAU);ctx.stroke();}if(this.model.factor==='surface'){const n=this.model.n;for(let i=0;i<n*2;i++){ctx.fillStyle=PARTICLE_PALETTES[1].body;ctx.fillRect(32+i*40/(n*2),85-(i%2)*3,13/n,7/n+2);}}ctx.restore();}
-    drawReplay(){const c=this.clear('replay-canvas');if(!c)return;const {ctx,w,h}=c,r=this.replay,t=r.time,success=r.kind==='success',low=r.kind==='low',cx=w/2,cy=h/2-6,spacing=Math.min(112,w*.31),contact=r.kind==='wrong'?16.8:12.5,approach=ease(t/1.8),check=t>=1.8,transform=ease((t-3.6)/1.3),separate=ease((t-4.9)/1.5),xA=cx-lerp(spacing,contact,approach),xB=cx+lerp(spacing,contact,approach),radius=12;
-      ctx.font='10px "Segoe UI",sans-serif';ctx.fillStyle=COLORS.muted;ctx.textAlign='right';ctx.fillText('Energy',cx-62,18);ctx.textAlign='left';ctx.fillStyle='#dce6da';ctx.fillRect(cx-52,13,104,5);ctx.fillStyle=low?'#b49b80':'#789f82';ctx.fillRect(cx-52,13,low?29:95,5);ctx.strokeStyle='#728c79';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(cx+10,9);ctx.lineTo(cx+10,23);ctx.stroke();ctx.fillStyle=COLORS.ink;ctx.fillText('Eₐ',cx+15,10);
-      ctx.strokeStyle='#d5e1d3';ctx.lineWidth=1;ctx.setLineDash([3,5]);ctx.beginPath();ctx.moveTo(18,cy);ctx.lineTo(w-18,cy);ctx.stroke();ctx.setLineDash([]);
-      if(!success||t<3.6){const back=!success?ease((t-3.6)/1.8)*spacing*.65:0;this.molecule(ctx,xA-back,cy,Math.PI/2,0,radius,28);this.molecule(ctx,xB+back,cy,r.kind==='wrong'?0:Math.PI/2,1,radius,28);if(t<1.8){ctx.lineWidth=1.6;for(const sign of [-1,1]){ctx.strokeStyle=PARTICLE_PALETTES[sign===-1?0:1].body;const xx=cx+sign*(spacing*.48);ctx.beginPath();ctx.moveTo(xx+sign*13,cy+36);ctx.lineTo(xx-sign*5,cy+36);ctx.lineTo(xx,cy+32);ctx.moveTo(xx-sign*5,cy+36);ctx.lineTo(xx,cy+40);ctx.stroke();}}}
-      else {const dx=lerp(12.5,14,transform),dy=lerp(14,22,transform)+separate*19;this.bond(ctx,cx-dx,cy-dy,cx-dx,cy+dy,5,1-transform,0);this.bond(ctx,cx+dx,cy-dy,cx+dx,cy+dy,5,1-transform,1);this.bond(ctx,cx-dx,cy-dy,cx+dx,cy-dy,5,transform,2);this.bond(ctx,cx-dx,cy+dy,cx+dx,cy+dy,5,transform,2);for(const sign of [-1,1]){this.atom(ctx,cx-dx,cy+sign*dy,radius,0);this.atom(ctx,cx+dx,cy+sign*dy,radius,1);}}
-      if(check&&t<3.6){ctx.strokeStyle=colourAlpha(PARTICLE_PALETTES[2].body,.38);ctx.lineWidth=1.5;ctx.beginPath();ctx.ellipse(cx,cy,53,39,0,0,TAU);ctx.stroke();}
-      ctx.font='10px "Segoe UI",sans-serif';ctx.fillStyle=COLORS.muted;ctx.textAlign='center';if(t<3.6){ctx.fillText('Reactant A',xA,cy-48);ctx.fillText('Reactant B',xB,cy-48);}else if(success)ctx.fillText('New bonds · products',cx,h-9);else ctx.fillText('Reactants separate unchanged',cx,h-12);ctx.textAlign='left';
-      const stage=t<1.8?'Particles approach':t<2.3?'Collision':t<3.6?'Check energy + orientation':success?(t<4.9?'Old bonds break · new bonds form':'Products form'):low?'Energy below Eₐ → no reaction':'Wrong orientation → no reaction';
-      if(stage!==r.stage){r.stage=stage;this.$('replay-stage').textContent=stage;const e=this.$('energy-check'),o=this.$('orientation-check');e.className='check'+(check?(low?' fail':' pass'):'');o.className='check'+(check?(r.kind==='wrong'?' fail':' pass'):'');e.textContent=check?(low?'× Energy < Eₐ':'✓ Energy ≥ Eₐ'):'Energy ≥ Eₐ';o.textContent=check?(r.kind==='wrong'?'× Wrong orientation':'✓ Correct orientation'):'Correct orientation';}
+    drawReplay(){
+      const c=this.clear('replay-canvas');if(!c)return;const {ctx,w,h}=c,r=this.replay,t=r.time,success=r.kind==='success',low=r.kind==='low',wrong=r.kind==='wrong';
+      this.drawChamber(ctx,w,h);
+      // Fixed artboard, uniformly scaled; close-up atoms retain their round silhouette.
+      const compact=w<450,vw=compact?390:660,vh=240,scale=Math.min(w/vw,h/vh),ox=(w-vw*scale)/2,oy=(h-vh*scale)/2;
+      ctx.save();ctx.translate(ox,oy);ctx.scale(scale,scale);
+      const cx=vw/2,cy=139,spacing=compact?103:156,contact=wrong?25:18.3,approach=ease(t/1.9),check=t>=1.9;
+      const energy=low?this.model.ea*.55:this.model.ea*1.34,test=ease((t-1.9)/.85),reform=ease((t-3.6)/1.3),depart=ease((t-4.9)/1.5),back=!success?ease((t-3.6)/1.8)*110:0;
+      const xA=cx-lerp(spacing,contact,approach)-back*(compact?.48:1),xB=cx+lerp(spacing,contact,approach)+back*(compact?.48:1),radius=18,gap=43;
+      const pulse=Math.sin(Math.PI*clamp((t-1.9)/.32,0,1));
+      // Energy comparison is calibrated to the active threshold, including catalyst.
+      const barX=cx-114,barY=32,barW=228,range=Math.max(2,this.model.ea*1.65),threshold=barX+this.model.ea/range*barW;
+      ctx.fillStyle='#d3dfd5';ctx.beginPath();ctx.roundRect(barX,barY,barW,6,3);ctx.fill();
+      const fillW=energy/range*barW*test;ctx.fillStyle=low?'#b68b68':'#6c9c7a';ctx.beginPath();ctx.roundRect(barX,barY,Math.max(.1,fillW),6,3);ctx.fill();
+      ctx.strokeStyle='#446952';ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(threshold,barY-6);ctx.lineTo(threshold,barY+13);ctx.stroke();
+      if(this.labels){ctx.font='11px "Segoe UI",sans-serif';ctx.fillStyle='#4b6c5b';ctx.textAlign='center';ctx.fillText(this.t('Collision energy'),cx,18);ctx.font='italic 12px Georgia,serif';ctx.textAlign='left';ctx.fillText(this.t('Eₐ'),threshold+6,barY+15);ctx.font='10px "Segoe UI",sans-serif';ctx.textAlign='left';ctx.fillText(this.t(check?'E = '+energy.toFixed(2):'Approaching'),barX,barY+25);ctx.textAlign='right';ctx.fillText(this.t(this.model.factor==='catalyst'&&this.model.ea<1?'Catalysed barrier':'Activation barrier'),barX+barW,barY+25,100);}
+      ctx.save();ctx.strokeStyle='#52796720';ctx.lineWidth=.8;ctx.setLineDash([3,6]);ctx.beginPath();ctx.moveTo(45,cy);ctx.lineTo(vw-45,cy);ctx.stroke();ctx.restore();
+      if(!success||t<=3.6){
+        this.drawMolecule(ctx,xA,cy,Math.PI/2,0,radius,gap,1,1,pulse*.055);
+        this.drawMolecule(ctx,xB,cy,wrong?0:Math.PI/2,1,radius,gap,1,2,pulse*.055);
+        // Reactive faces make orientation visible before labels explain it.
+        if(t<3.6){ctx.save();ctx.globalAlpha=check?.7:.32;ctx.strokeStyle=wrong?'#a6826b':'#729a78';ctx.lineWidth=1.7;
+          ctx.beginPath();ctx.moveTo(xA+20,cy-17);ctx.lineTo(xA+20,cy+17);ctx.stroke();
+          ctx.beginPath();if(wrong){ctx.moveTo(xB-17,cy-20);ctx.lineTo(xB+17,cy-20);}else{ctx.moveTo(xB-20,cy-17);ctx.lineTo(xB-20,cy+17);}ctx.stroke();
+          if(check){ctx.setLineDash([2,4]);ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(xA+20,cy-16);ctx.lineTo(wrong?xB: xB-20,wrong?cy-20:cy-16);ctx.stroke();}ctx.restore();}
+      }else{
+        // Same four atoms throughout: AA + BB → two AB molecules.
+        const dx=lerp(contact,25,reform)+depart*10,dy=lerp(gap/2,28,reform)+depart*24;
+        const atoms=[{x:cx-dx,y:cy-dy,type:0},{x:cx-dx,y:cy+dy,type:0},{x:cx+dx,y:cy-dy,type:1},{x:cx+dx,y:cy+dy,type:1}];
+        const old=1-ease((t-3.6)/.82),formed=ease((t-3.95)/.95);
+        // Old bonds thin continuously before new bonds acquire their full material.
+        this.drawBond(ctx,atoms[0].x,atoms[0].y,atoms[1].x,atoms[1].y,7*old,old,0);
+        this.drawBond(ctx,atoms[2].x,atoms[2].y,atoms[3].x,atoms[3].y,7*old,old,1);
+        for(let i=0;i<2;i++)this.drawBond(ctx,atoms[i].x,atoms[i].y,atoms[i+2].x,atoms[i+2].y,7*formed,formed,2);
+        for(const a of atoms)this.drawAtom(ctx,a.x,a.y,radius,a.type,1,a.type+1);
+      }
+      if(check){this.drawContactLight(ctx,cx,cy,t-1.9,success?1.8:.7);if(success)this.drawContactLight(ctx,cx,cy,t-3.6,1.6);}
+      if(t<1.9){const a=1-approach;ctx.save();ctx.globalAlpha=a*.7;ctx.lineWidth=1.4;for(const sign of [-1,1]){const xx=cx+sign*83;ctx.strokeStyle=PARTICLE_PALETTES[sign<0?0:1].body;ctx.beginPath();ctx.moveTo(xx+sign*16,cy+51);ctx.lineTo(xx-sign*4,cy+51);ctx.lineTo(xx+sign*2,cy+47);ctx.moveTo(xx-sign*4,cy+51);ctx.lineTo(xx+sign*2,cy+55);ctx.stroke();}ctx.restore();}
+      if(this.labels){ctx.font='11px "Segoe UI",sans-serif';ctx.textAlign='center';ctx.fillStyle='#5d7868';if(t<3.6){ctx.textAlign='right';ctx.fillText(this.t('Reactant A'),xA-10,cy-54);ctx.textAlign='left';ctx.fillText(this.t('Reactant B'),xB+10,cy-54);ctx.textAlign='center';}else if(success){ctx.fillText(this.t(t<4.9?'Same atoms · new bonds':'Two AB products'),cx,cy+8);}else ctx.fillText(this.t('Reactants remain unchanged'),cx,vh-34);}
+      // Quiet five-stage teaching timeline; the current step follows replay time.
+      const step=t<1.9?0:t<2.35?1:t<3.6?2:t<4.9?3:4,names=['Approach','Contact','Test','Reorganise','Separate'];
+      const timelineLeft=compact?51:146,timelineGap=compact?72:92;
+      for(let i=0;i<5;i++){const xx=timelineLeft+i*timelineGap;ctx.strokeStyle=i<step?'#8eaf91':'#c4d4c6';ctx.lineWidth=1.4;if(i<4){ctx.beginPath();ctx.moveTo(xx+5,vh-14);ctx.lineTo(xx+timelineGap-5,vh-14);ctx.stroke();}ctx.fillStyle=i===step?'#456e54':i<step?'#9ab7a0':'#cedbd0';ctx.beginPath();ctx.arc(xx,vh-14,i===step?3.8:2.5,0,TAU);ctx.fill();if(this.labels){ctx.font='9px "Segoe UI",sans-serif';ctx.textAlign='center';ctx.fillStyle=i===step?'#3e624a':'#839286';ctx.fillText(this.t(!success&&i===3?'Rebound':names[i]),xx,vh-24);}}
+      ctx.restore();
+      const stage=t<1.9?'Particles approach':t<2.35?'Contact · slow down and observe':t<3.6?'Compare energy and reactive faces':success?(t<4.9?'Old bonds weaken · new bonds form':'Two products separate'):low?'Energy below Eₐ → reactants separate unchanged':'Wrong orientation → reactants separate unchanged';
+      if(stage!==r.stage){r.stage=stage;this.$('replay-stage').textContent=stage;const e=this.$('energy-check'),o=this.$('orientation-check');e.className='check'+(check?(low?' fail':' pass'):'');o.className='check'+(check?(wrong?' fail':' pass'):'');e.textContent=check?(low?'× Energy < Eₐ':'✓ Energy ≥ Eₐ'):'Energy ≥ Eₐ';o.textContent=check?(wrong?'× Wrong orientation':'✓ Correct orientation'):'Correct orientation';this.localizeUI();}
     }
+
   }
   global.CollisionTheoryLab=CollisionTheoryLab;
   if(!customElements.get('collision-theory-lab'))customElements.define('collision-theory-lab',CollisionTheoryLab);
